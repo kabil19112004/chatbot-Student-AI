@@ -1,0 +1,205 @@
+{
+  "users": {
+    "6a9a53d19b3003b5696b864a": {
+      "name": "Alex Carter",
+      "email": "student@university.edu",
+      "password": "$2b$12$dWVdr13DdoTO.FqfafVTeOGg5g.Qe926C1Pd7JMcTf5L2YaVvJCvi",
+      "created_at": "2026-09-04 05:14:57.875834+00:00",
+      "_id": "6a9a53d19b3003b5696b864a"
+    },
+    "6aa41a45aa65a5b77f363d28": {
+      "name": "Test",
+      "email": "test2@test.com",
+      "password": "$2b$12$n/QFpYUhv54ioLyzX8QV4e8tCFw3uVMqdqnUt.25j42w.tRcEObpW",
+      "created_at": "2026-09-11 15:12:05.535480+00:00",
+      "_id": "6aa41a45aa65a5b77f363d28"
+    }
+  },
+  "study_notes": {
+    "6a9a53d29b3003b5696b864b": {
+      "user_id": "6a9a53d19b3003b5696b864a",
+      "title": "Python Loops",
+      "subject": "Programming",
+      "content": "for i in range(10): print(i)",
+      "favorite": false,
+      "source": "manual",
+      "created_at": "2026-09-04 05:14:58.208660+00:00",
+      "updated_at": "2026-09-04 05:14:58.208662+00:00",
+      "_id": "6a9a53d29b3003b5696b864b"
+    }
+  },
+  "chats": {
+    "6a9a53d29b3003b5696b864c": {
+      "user_id": "6a9a53d19b3003b5696b864a",
+      "title": "What is polymorphism in OOP?",
+      "created_at": "2026-09-04 05:14:58.216267+00:00",
+      "updated_at": "2026-09-04 05:15:08.795434+00:00",
+      "_id": "6a9a53d29b3003b5696b864c"
+    },
+    "6aa41a4daa65a5b77f363d29": {
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "title": "What is Python?",
+      "created_at": "2026-09-11 15:12:13.237706+00:00",
+      "updated_at": "2026-09-11 15:12:13.614136+00:00",
+      "_id": "6aa41a4daa65a5b77f363d29"
+    },
+    "6aa41aa1aa65a5b77f363d2c": {
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "title": "What is Python?",
+      "created_at": "2026-09-11 15:13:37.740790+00:00",
+      "updated_at": "2026-09-11 15:13:38.041301+00:00",
+      "_id": "6aa41aa1aa65a5b77f363d2c"
+    },
+    "6aa41ac9aa65a5b77f363d2f": {
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "title": "What is Python?",
+      "created_at": "2026-09-11 15:14:17.276480+00:00",
+      "updated_at": "2026-09-11 15:14:17.616461+00:00",
+      "_id": "6aa41ac9aa65a5b77f363d2f"
+    },
+    "6aa41b19474c62f4fcc90e35": {
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "title": "What is Python?",
+      "created_at": "2026-09-11 15:15:37.913390+00:00",
+      "updated_at": "2026-09-11 15:18:27.501789+00:00",
+      "_id": "6aa41b19474c62f4fcc90e35"
+    },
+    "6aa41b4b54367a741b2caae3": {
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "title": "What is Python?",
+      "created_at": "2026-09-11 15:16:27.938256+00:00",
+      "updated_at": "2026-09-11 15:16:32.550429+00:00",
+      "_id": "6aa41b4b54367a741b2caae3"
+    }
+  },
+  "messages": {
+    "6a9a53d29b3003b5696b864d": {
+      "chat_id": "6a9a53d29b3003b5696b864c",
+      "user_id": "6a9a53d19b3003b5696b864a",
+      "role": "user",
+      "content": "What is polymorphism in OOP?",
+      "created_at": "2026-09-04 05:14:58.216655+00:00",
+      "_id": "6a9a53d29b3003b5696b864d"
+    },
+    "6a9a53dc9b3003b5696b864e": {
+      "chat_id": "6a9a53d29b3003b5696b864c",
+      "user_id": "6a9a53d19b3003b5696b864a",
+      "role": "assistant",
+      "content": "### What is Polymorphism in Object-Oriented Programming (OOP)?\n\n**Polymorphism** comes from two Greek words:\n* **Poly** = Many  \n* **Morph** = Forms  \n\nIn Object-Oriented Programming, **polymorphism** is the ability of different objects to respond to the **same method or function call in their own specific way**. \n\nIn simple terms: It allows one interface (method name) to be used for different underlying data types or classes.\n\n---\n\n### Real-World Analogy\n\nThink of the word **\"Speak\"**:\n* If you tell a **Dog** to speak, it says **\"Woof!\"**\n* If you tell a **Cat** to speak, it says **\"Meow!\"**\n* If you tell a **Human** to speak, they say **\"Hello!\"**\n\nThe command (`speak()`) is exactly the same, but the result depends entirely on **who** is receiving the command.\n\n---\n\n### How Polymorphism Works in Python\n\nThere are two common ways polymorphism is used in Python:\n\n#### 1. Polymorphism through Inheritance (Method Overriding)\nChild classes can override a method defined in a parent class to give it a specific implementation.\n\n```python\n# Parent Class\nclass Animal:\n    def make_sound(self):\n        return \"Some generic animal sound\"\n\n# Child Class 1\nclass Dog(Animal):\n    def make_sound(self):\n        return \"Woof! Woof!\"\n\n# Child Class 2\nclass Cat(Animal):\n    def make_sound(self):\n        return \"Meow!\"\n\n# Using Polymorphism\nanimals = [Dog(), Cat(), Animal()]\n\nfor animal in animals:\n    # Same method name called on different object types\n    print(animal.make_sound())\n```\n\n**Output:**\n```text\nWoof! Woof!\nMeow!\nSome generic animal sound\n```\n\n---\n\n#### 2. Polymorphism with Functions (\"Duck Typing\")\nIn Python, if an object has a specific method, a function can call that method regardless of the object's class type. (This is often described as: *\"If it walks like a duck and quacks like a duck, it's a duck.\"*)\n\n```python\nclass Rectangle:\n    def draw(self):\n        print(\"Drawing a Rectangle \u2588\")\n\nclass Circle:\n    def draw(self):\n        print(\"Drawing a Circle \u25cf\")\n\n# Polymorphic function\ndef render_shape(shape):\n    # Works for ANY object that has a draw() method\n    shape.draw()\n\n# Creating objects\nrect = Rectangle()\ncirc = Circle()\n\n# Calling the same function with different object types\nrender_shape(rect)\nrender_shape(circ)\n```\n\n**Output:**\n```text\nDrawing a Rectangle \u2588\nDrawing a Circle \u25cf\n```\n\n---\n\n### Why is Polymorphism Important?\n\n* **Code Reusability:** You can write a single function or loop that works with many different types of objects.\n* **Flexibility:** You can add new classes (e.g., a `Bird` class) without breaking or changing your existing code.\n* **Cleaner Code:** Reduces the need for long `if-else` or `switch` statements to check object types.",
+      "created_at": "2026-09-04 05:15:08.794470+00:00",
+      "_id": "6a9a53dc9b3003b5696b864e"
+    },
+    "6aa41a4daa65a5b77f363d2a": {
+      "chat_id": "6aa41a4daa65a5b77f363d29",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Python?",
+      "created_at": "2026-09-11 15:12:13.238417+00:00",
+      "_id": "6aa41a4daa65a5b77f363d2a"
+    },
+    "6aa41a4daa65a5b77f363d2b": {
+      "chat_id": "6aa41a4daa65a5b77f363d29",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Error**: The AI model service is currently unavailable or misconfigured.\n\nI am unable to process your request about 'What is Python?...' because both the local Ollama instance and the Gemini API fallback failed to respond. Please check the backend console logs and ensure `GEMINI_API_KEY` is configured correctly.",
+      "created_at": "2026-09-11 15:12:13.613243+00:00",
+      "_id": "6aa41a4daa65a5b77f363d2b"
+    },
+    "6aa41aa1aa65a5b77f363d2d": {
+      "chat_id": "6aa41aa1aa65a5b77f363d2c",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Python?",
+      "created_at": "2026-09-11 15:13:37.741272+00:00",
+      "_id": "6aa41aa1aa65a5b77f363d2d"
+    },
+    "6aa41aa2aa65a5b77f363d2e": {
+      "chat_id": "6aa41aa1aa65a5b77f363d2c",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Error**: The AI model service is currently unavailable or misconfigured.\n\nI am unable to process your request about 'What is Python?...' because both the local Ollama instance and the Gemini API fallback failed to respond. Please check the backend console logs and ensure `GEMINI_API_KEY` is configured correctly.",
+      "created_at": "2026-09-11 15:13:38.039846+00:00",
+      "_id": "6aa41aa2aa65a5b77f363d2e"
+    },
+    "6aa41ac9aa65a5b77f363d30": {
+      "chat_id": "6aa41ac9aa65a5b77f363d2f",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Python?",
+      "created_at": "2026-09-11 15:14:17.277434+00:00",
+      "_id": "6aa41ac9aa65a5b77f363d30"
+    },
+    "6aa41ac9aa65a5b77f363d31": {
+      "chat_id": "6aa41ac9aa65a5b77f363d2f",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Error**: The AI model service is currently unavailable or misconfigured.\n\nI am unable to process your request about 'What is Python?...' because both the local Ollama instance and the Gemini API fallback failed to respond. Please check the backend console logs and ensure `GEMINI_API_KEY` is configured correctly.",
+      "created_at": "2026-09-11 15:14:17.615078+00:00",
+      "_id": "6aa41ac9aa65a5b77f363d31"
+    },
+    "6aa41b19474c62f4fcc90e36": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Python?",
+      "created_at": "2026-09-11 15:15:37.914200+00:00",
+      "_id": "6aa41b19474c62f4fcc90e36"
+    },
+    "6aa41b1d474c62f4fcc90e37": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Python** is a popular, high-level programming language that is widely used for writing computer software. It was created by Guido van Rossum and released in 1991. \n\nThink of Python as a way to give instructions to a computer using words and rules that look a lot like everyday English. Because of this, it is one of the easiest programming languages to learn!\n\n### Key Features of Python:\n*   **Easy to Read and Write:** Python uses clean and simple syntax (rules for writing code). It requires fewer lines of code to do things compared to other languages like Java or C++.\n*   **Versatile (Multipurpose):** You can use Python for almost anything, including:\n    *   Building websites (Web Development)\n    *   Creating Artificial Intelligence (AI) and Machine Learning models\n    *   Analyzing data (Data Science)\n    *   Automating repetitive tasks (like renaming hundreds of files at once)\n    *   Developing video games\n*   **Cross-Platform:** Python works on different operating systems, including Windows, macOS, and Linux.\n\n### Example of Python Code:\nTo print a message on the screen in Python, you only need one simple line of code:\n\n```python\nprint(\"Hello, Student!\")\n```\n\nIn other languages, doing this might require 5 to 10 lines of complex code. This simplicity is why Python is the go-to language for beginners and professionals alike!",
+      "created_at": "2026-09-11 15:15:41.787668+00:00",
+      "_id": "6aa41b1d474c62f4fcc90e37"
+    },
+    "6aa41b22474c62f4fcc90e38": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What about SQL?",
+      "created_at": "2026-09-11 15:15:46.595730+00:00",
+      "_id": "6aa41b22474c62f4fcc90e38"
+    },
+    "6aa41b26474c62f4fcc90e39": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**SQL** (which stands for **Structured Query Language** and is pronounced either \"S-Q-L\" or \"Sequel\") is a special programming language used to communicate with and manage **databases**. \n\nIf you think of a database as a giant, highly organized digital filing cabinet, SQL is the tool you use to put files in, search through them, update them, or throw them away.\n\n### What is SQL used for?\nWhile Python is used to build apps and write logic, SQL is specifically designed to handle data. It allows you to:\n*   **Retrieve Data:** Ask the database questions and get specific answers (e.g., \"Show me a list of all students who got an A in math\").\n*   **Insert Data:** Add new information to the database (e.g., registering a new student).\n*   **Update Data:** Change existing information (e.g., updating a student's phone number).\n*   **Delete Data:** Remove information that is no longer needed.\n\n### Example of SQL Code:\nImagine you have a database table called `Students` that lists names and grades. \n\nTo find the names of all students who got an \"A\", you would write a simple SQL query like this:\n\n```sql\nSELECT Name \nFROM Students \nWHERE Grade = 'A';\n```\n\n### Why is SQL important?\nAlmost every modern app and website (like Netflix, Instagram, or Spotify) needs to store data. They use SQL behind the scenes to instantly pull up your profile, your playlist, or your watch history whenever you log in!",
+      "created_at": "2026-09-11 15:15:50.143688+00:00",
+      "_id": "6aa41b26474c62f4fcc90e39"
+    },
+    "6aa41b4b54367a741b2caae4": {
+      "chat_id": "6aa41b4b54367a741b2caae3",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Python?",
+      "created_at": "2026-09-11 15:16:27.939120+00:00",
+      "_id": "6aa41b4b54367a741b2caae4"
+    },
+    "6aa41b5054367a741b2caae5": {
+      "chat_id": "6aa41b4b54367a741b2caae3",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Python** is a popular, high-level programming language used to give instructions to computers. It was created by Guido van Rossum and released in 1991. \n\nThink of Python as a way to talk to your computer using a language that looks a lot like everyday English. Because it is so easy to read and write, it is one of the most popular languages for beginners and professional developers alike.\n\n---\n\n### Why is Python so popular?\n\n* **Easy to Learn and Read:** Python's syntax (the rules for how code is written) is clean and simple. It uses plain English words, which means you don't have to deal with complex symbols like in other languages.\n* **Versatile:** It can be used for almost anything\u2014from building websites to analyzing scientific data.\n* **Works Everywhere:** Python runs on Windows, Mac, Linux, and even microchips (like Raspberry Pi).\n* **Huge Community:** Because millions of people use Python, there are countless free tutorials, guides, and pre-written code packages (called libraries) that you can use.\n\n---\n\n### What is Python used for?\n\nPython is a \"general-purpose\" language, meaning it can be used in many different fields:\n\n1. **Artificial Intelligence (AI) and Machine Learning:** Python is the go-to language for training smart systems, like ChatGPT or self-driving cars.\n2. **Data Science:** Scientists and analysts use Python to organize, visualize, and understand massive amounts of data.\n3. **Web Development:** Python powers the backend (the behind-the-scenes brain) of famous websites like Instagram, YouTube, and Spotify.\n4. **Automation:** You can write simple Python scripts to do boring, repetitive tasks for you\u2014like renaming hundreds of files or scraping information from a website.\n\n---\n\n### Example of Python Code\n\nTo show you how simple it is, here is how you tell a computer to print a message in Python:\n\n```python\nprint(\"Hello, Student!\")\n```\n\nIn other programming languages, writing that same message might take 5 or 6 lines of complicated code. In Python, it takes just one!",
+      "created_at": "2026-09-11 15:16:32.549174+00:00",
+      "_id": "6aa41b5054367a741b2caae5"
+    },
+    "6aa41bbf54367a741b2caae6": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "user",
+      "content": "What is Machine Learning?",
+      "created_at": "2026-09-11 15:18:23.515658+00:00",
+      "_id": "6aa41bbf54367a741b2caae6"
+    },
+    "6aa41bc354367a741b2caae7": {
+      "chat_id": "6aa41b19474c62f4fcc90e35",
+      "user_id": "6aa41a45aa65a5b77f363d28",
+      "role": "assistant",
+      "content": "**Machine Learning (ML)** is a branch of Artificial Intelligence (AI) that allows computers to learn and make decisions *without* being directly programmed for every single task. \n\nInstead of a human writing strict rules for the computer to follow, we feed the computer lots of data (examples), and the computer uses math and patterns to figure out the rules on its own.\n\n---\n\n### How is it different from Traditional Programming?\n\n*   **Traditional Programming:** You give the computer **Data** + **Rules** = You get an **Answer**.\n    *   *Example:* You write a rule: \"If an email contains the word 'FREE MONEY', mark it as spam.\"\n*   **Machine Learning:** You give the computer **Data** + **Answers** = It learns the **Rules**.\n    *   *Example:* You show the computer 10,000 emails marked \"spam\" and 10,000 emails marked \"not spam.\" The computer studies them and learns on its own what a spam email looks like.\n\n---\n\n### Real-World Examples of Machine Learning:\n\n*   **Streaming Recommendations:** Netflix and YouTube use ML to look at what you have watched in the past and predict what show or video you will want to watch next.\n*   **Smart Assistants:** Siri and Alexa use ML to recognize your voice and understand what you are saying, even if you speak with an accent.\n*   **Self-Driving Cars:** Cars use ML to identify objects around them, like pedestrians, stop signs, and other vehicles, so they can drive safely.\n*   **Face Recognition:** Your phone uses ML to map your facial features and unlock your screen.\n\nIn short, Machine Learning is all about teaching computers to **learn from experience**, just like humans do!",
+      "created_at": "2026-09-11 15:18:27.500758+00:00",
+      "_id": "6aa41bc354367a741b2caae7"
+    }
+  }
+}

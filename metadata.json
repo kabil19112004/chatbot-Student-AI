@@ -1,0 +1,6 @@
+{
+  "name": "ScholarAI",
+  "description": "AI Student Assistant full-stack web application with deep research, chat, study notes, progress tracking, and settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
